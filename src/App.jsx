@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { sculptureList } from "./components/Rate.jsx";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function Gallery() {
+  // Declare a state variable for the current index
+  const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
+
+  function handleClick() {
+    // ინდექსის გაზრდა და მისი დაბრუნება 0-ზე, თუ ის სიას გადააჭარბებს
+    // setIndex((prevIndex) => prevIndex + 1);
+    setIndex(index + 1);
+  }
+  function btn() {
+    setShowMore(!showMore);
+  }
+
+  let sculpture = sculptureList[index];
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      <button onClick={handleClick}>Next</button>
+      <h2>
+        <i>{sculpture.name} </i> by {sculpture.artist}
+      </h2>
+      <h3>
+        ({index + 1} of {sculptureList.length})
+      </h3>
+      <img src={sculpture.url} alt={sculpture.alt} />
+      <p>{sculpture.description}</p>
 
-export default App
+      <button onClick={btn}> {showMore ? "hide" : "show"} text</button>
+
+      {showMore && <p> TEXT TO TEST HIDE AND SHOW</p>}
+    </>
+  );
+}
