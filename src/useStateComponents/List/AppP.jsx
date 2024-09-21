@@ -77,7 +77,9 @@ function AppP() {
 
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="">Title</label>
+          <label htmlFor="" className="text-red-950">
+            Title
+          </label>
           <input
             type="text"
             onChange={(event) => setTitle(event.target.value)}
