@@ -7,9 +7,10 @@
 // import IncimentInput from "./components/useState/IncrimentInput";
 // import ObjInState from "./useStateComponents/useState/ObjInState";
 // import AppList from "./useStateComponents/listArray/AppList";
+// import Dr from "./useStateComponents/Tasks/Dr";
 // import Drop from "./useStateComponents/Tasks/Drop";
-
-import AppQ from "./useStateComponents/Tasks/Dropbox/AppQ";
+// import AppQ from "./useStateComponents/Tasks/Dropbox/AppQ";
+import AppP from "./useStateComponents/List/AppP";
 
 export default function App() {
   return (
@@ -24,7 +25,9 @@ export default function App() {
       {/* <ObjInState /> */}
       {/* <AppList /> */}
       {/* <Drop /> */}
-      <AppQ />
+      {/* <AppQ /> */}
+      {/* <Dr /> */}
+      <AppP />
     </>
   );
 }

@@ -3,10 +3,10 @@
 
 export default function Question(props) {
   // კონსოლში პროპსების მონაცემების გამოტანა (დაწყობილია)
-  console.log(props);
+  // console.log(props);
 
   return (
-    <div className="question-div">
+    <>
       <p
         className="question"
         onClick={() => {
@@ -26,6 +26,6 @@ export default function Question(props) {
       {props.active === props.questionNumber ? (
         <p>Answer {props.questionNumber}</p>
       ) : null}
-    </div>
+    </>
   );
 }
