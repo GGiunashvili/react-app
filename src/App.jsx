@@ -10,24 +10,23 @@
 // import Dr from "./useStateComponents/Tasks/Dr";
 // import Drop from "./useStateComponents/Tasks/Drop";
 // import AppQ from "./useStateComponents/Tasks/Dropbox/AppQ";
-import AppP from "./useStateComponents/List/AppP";
+// import AppP from "./useStateComponents/List/AppP";
+// import Counter from "./useStateComponents/useState/Counter";
+// import Checkbox from "./useStateComponents/useState/Checkbox";
+// import IncimentInput from "./useStateComponents/useState/IncrimentInput";
+// import Inc2 from "./useStateComponents/useState/Inc2";
+// import IncrimentInput from "./useStateComponents/useState/IncrimentInput";
+import Form from "./useStateComponents/useState/Form";
+
+// import { useState } from "react";
 
 export default function App() {
   return (
     <>
-      {/* <Rate /> */}
-      {/* <Form /> */}
-      {/* <FeedbackForm /> */}
-      {/* <FeedBack /> */}
+      <Form />
+      {/* <IncrimentInput /> */}
       {/* <Checkbox /> */}
       {/* <Counter /> */}
-      {/* <IncimentInput /> */}
-      {/* <ObjInState /> */}
-      {/* <AppList /> */}
-      {/* <Drop /> */}
-      {/* <AppQ /> */}
-      {/* <Dr /> */}
-      <AppP />
     </>
   );
 }

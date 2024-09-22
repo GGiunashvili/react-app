@@ -1,18 +1,28 @@
 import { useState } from "react";
 
 export default function Counter() {
-  const [counter, setCounter] = useState(1);
-  function incriment() {
-    setCounter(counter + 1);
+  const [count, setcount] = useState(2);
+
+  function increment() {
+    if (count == "empty") {
+      setcount(1);
+    } else if (count < 10) {
+      setcount(count + 1);
+    }
   }
-  function decriment() {
-    setCounter(counter - 1);
+  function decrement() {
+    if (count > 1) {
+      setcount(count - 1);
+    } else count <= 1;
+    {
+      setcount("empty");
+    }
   }
   return (
     <>
-      <h1>{counter}</h1>
-      <button onClick={decriment}>decriment</button>
-      <button onClick={incriment}>incriment</button>
+      <h1>{count}</h1>
+      <button onClick={decrement}>decriment</button>
+      <button onClick={increment}>incriment</button>
     </>
   );
 }

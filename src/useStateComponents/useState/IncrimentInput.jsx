@@ -1,19 +1,21 @@
-import { useState } from "react";
-import Counter from "./Counter";
-export default function IncimentInput() {
-  const [input, setInput] = useState("");
+import React, { useState } from "react";
+
+export default function Inc() {
+  const [input, setInput] = useState("Name");
   const [counter, setCounter] = useState(0);
 
-  function addText(e) {
+  function handle(e) {
     setInput(e.target.value);
   }
-
   function count() {
-    setCounter((a) => a + 1);
+    setCounter((prevCounter) => prevCounter + 1);
   }
+  console.log(input);
+
   return (
     <>
-      <input onChange={addText} type="text" />
+      <input onChange={handle} type="text" />
+
       <button
         onClick={() => {
           count();
@@ -21,11 +23,12 @@ export default function IncimentInput() {
           count();
         }}
       >
-        inctiment+1
+        btn
       </button>
-      <h1>
-        hello , {input}. you are {counter}
-      </h1>
+
+      <p>
+        your name is {input} and your age is {counter}
+      </p>
     </>
   );
 }

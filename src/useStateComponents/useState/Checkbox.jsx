@@ -1,24 +1,38 @@
 import { useState } from "react";
 
 export default function Checkbox() {
-  const [check, setCheck] = useState(false);
-  function handleChange(e) {
-    setCheck(e.target.checked);
+  const [check, setChecked] = useState(false);
+  console.log(check); // function clicked() {
+  //   if (check) {
+  //     setChecked(false);
+  //   } else {
+  //     setChecked(true);
+  //   }
+  // }
+  // function clicked() {
+  //   setChecked((prevCheck) => !prevCheck);
+  // }
+  function clicked(e) {
+    setChecked(e.target.checked); // checkbox-ის სტატუსს პირდაპირ ვაყენებთ
   }
   return (
     <>
       <label>
-        <input type="checkbox" checked={check} onChange={handleChange} />
+        <input onChange={clicked} type="checkbox" />
         label
       </label>
+
       <p
         style={{
           ...(check
-            ? { backgroundColor: "green", padding: "20px" }
-            : { backgroundColor: "red", padding: "22px" }),
+            ? { color: "white", backgroundColor: "green" }
+            : { color: "black", backgroundColor: "red" }),
+
+          fontSize: "24px",
+          margin: "20px",
         }}
       >
-        {check ? "checked" : "nocheck"}
+        {check ? "checked" : "not checked"}
       </p>
     </>
   );

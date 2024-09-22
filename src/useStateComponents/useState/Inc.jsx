@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Form() {
+export default function () {
   const [nameInput, setNameInput] = useState("");
   const [surnameInput, setSurNameInput] = useState("");
 
