@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Form() {
+export default function NestedObj() {
   const [person, setPerson] = useState({
     name: "Niki de Saint Phalle",
     artwork: {

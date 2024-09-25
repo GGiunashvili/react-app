@@ -16,14 +16,19 @@
 // import IncimentInput from "./useStateComponents/useState/IncrimentInput";
 // import Inc2 from "./useStateComponents/useState/Inc2";
 // import IncrimentInput from "./useStateComponents/useState/IncrimentInput";
-import Form from "./useStateComponents/useState/Form";
+// import Form from "./useStateComponents/useState/Form";
+// import ObjInState from "./useStateComponents/useState/ObjInState";
+import Notifications from "./useStateComponents/notifications/Notifications";
 
 // import { useState } from "react";
 
 export default function App() {
   return (
     <>
-      <Form />
+      <Notifications />
+      {/* <ObjInState /> */}
+
+      {/* <Form /> */}
       {/* <IncrimentInput /> */}
       {/* <Checkbox /> */}
       {/* <Counter /> */}
